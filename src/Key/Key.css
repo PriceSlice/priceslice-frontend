@@ -1,0 +1,26 @@
+/* key.css */
+
+.key {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.gradient-bar {
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(to right, rgb(173, 173, 173), rgb(28, 28, 40));
+  border-radius: 0.3rem;
+}
+
+.cover {
+  background-color: rgb(255, 255, 255);
+}
+
+.annotations {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  /* Removed redundant width property */
+}

@@ -1,0 +1,120 @@
+/* Sidebar.css */
+
+.sidebar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 160px;
+    height: 90%;
+    background-color: #333;
+    color: #fff;
+    transition: height 0.5s ease;
+    overflow: hidden;
+    border-radius: .5rem;
+  }
+  
+  .collapsed {
+    height: 35px;
+  }
+  
+  .toggle-btn {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 4px;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  }
+  
+  .tabs-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rounded{
+    border-radius: .3rem;
+    margin-bottom: 2px;
+    width: 80%;
+  }
+
+  .text-big{
+    font-size:1rem;
+    align-items: center;
+  }
+
+  .ingredient-container::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  .ingredient-container::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  .ingredient-container::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 10px;
+  }
+  
+  .ingredient-container::-webkit-scrollbar-thumb:hover {
+    background: darkgrey; 
+  }
+  
+  .tab {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+  }
+  
+  .tab:hover {
+    background-color: #777;
+  }
+  
+  .content {
+    padding: 10px;
+    font-size:.75rem;
+  }
+  
+  .ingredient-container {
+    max-height: 600px; /* Adjust the height as needed */
+    overflow-y: auto;
+    scrollbar-width: thin; 
+    scrollbar-color: #888 transparent; 
+    scrollbar-width: none;
+  }
+  
+  .ingredient-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .tab.open {
+    background-color: #777;
+  }
+  
+  .ingredient-btn {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+  }
+  
+  .ingredient-btn:hover {
+    background-color: #777;
+  }
+  
