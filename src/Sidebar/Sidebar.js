@@ -12,7 +12,10 @@ const Sidebar = () => {
   const { alphaValues, setAlphaValues } = React.useContext(GlobalContext);
   const { origValues, setOrigValues } = React.useContext(GlobalContext);
   function handleSubmit() {
-    console.log(selectedIngredients);
+    if (selectedIngredients.length !== 1) {
+      alert('Please select one ingredient');
+      return;
+    }
 
     const selectedIngredientsXdict = selectedIngredients.map(ingredient => ingredientToXdict(ingredient));
 
