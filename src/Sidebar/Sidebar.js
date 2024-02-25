@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './Sidebar.css';
-import { AlphaGetter } from '../alphaGetter.js';
+import { AlphaGetter, OrigGetter } from '../alphaGetter.js';
 import { GlobalContext } from '../context/GlobalContext';
 import { ingredientToXdict } from '../pages/util.js';
 
@@ -10,13 +10,14 @@ const Sidebar = () => {
   const [filteredIngredients, setFilteredIngredients] = useState([]);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
   const { alphaValues, setAlphaValues } = React.useContext(GlobalContext);
-
+  const { origValues, setOrigValues } = React.useContext(GlobalContext);
   function handleSubmit() {
     console.log(selectedIngredients);
 
     const selectedIngredientsXdict = selectedIngredients.map(ingredient => ingredientToXdict(ingredient));
 
     setAlphaValues(AlphaGetter(selectedIngredientsXdict));
+    setOrigValues(OrigGetter(selectedIngredientsXdict));
 
   }
 

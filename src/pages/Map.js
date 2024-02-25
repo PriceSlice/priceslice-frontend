@@ -61,8 +61,10 @@ const markers = [
 
 
 const Map = () => {
-    const { alphaValues } = useContext(GlobalContext);
+    const { alphaValues, origValues } = useContext(GlobalContext);
+
     const [localAlphaValues, setLocalAlphaValues] = useState({});
+    const [localOrigValues, setLocalOrigValues] = useState({});
 
     useEffect(() => {
         const fetchAlphaValues = async () => {
@@ -76,6 +78,18 @@ const Map = () => {
 
         fetchAlphaValues();
     }, [alphaValues]);
+    useEffect(() => {
+        const fetchOrigValues = async () => {
+            try {
+                const origValuesData = await origValues;
+                setLocalOrigValues(origValuesData);
+            } catch (error) {
+                console.error("Error fetching alpha values:", error);
+            }
+        };
+
+        fetchOrigValues();
+    }, [origValues]);
 
 
     function formatAlphaValues(geo_name) {
@@ -94,6 +108,22 @@ const Map = () => {
         }
 
     }
+    function formatOrigValues(geo_name) {
+        if (localAlphaValues.length === 0) {
+            return 0;
+        } else if (localOrigValues === undefined) {
+            return 0;
+        } else if (localOrigValues === null) {
+            return 0;
+        } else if (localOrigValues[geo_name] === undefined) {
+            return 0;
+        } else if (localOrigValues[geo_name] === null) {
+            return 0;
+        } else {
+            return localOrigValues[geo_name].toFixed(2);
+        }
+
+    }
     return (
         <div>
             <ComposableMap
@@ -107,7 +137,7 @@ const Map = () => {
                                     <Geography
                                         key={geo.rsmKey}
                                         geography={geo}
-                                        title={geo.properties.name}
+                                        title={geo.properties.name }
                                         fill={`rgb(42,53,77,${(formatAlphaValues(geo.properties.name)) + .2})`}
                                         style={{
                                             default: { outline: "none" },
@@ -115,7 +145,7 @@ const Map = () => {
                                             pressed: { outline: "none" },
                                         }}
                                     >
-                                        <title>{geo.properties.name}</title>
+                                        <title>{geo.properties.name+": "+formatOrigValues(geo.properties.name)}</title>
                                     </Geography>
                                 </a>
                             ))

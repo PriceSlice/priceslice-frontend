@@ -23,9 +23,31 @@ export async function AlphaGetter(selectedIngredients) {
             let alpha = (sequence[i][1] - min) / (max - min);
             newAlphaValues[sequence[i][0]] = alpha;
         }
+        console.log("new alpha");
+        console.log(newAlphaValues);
         return newAlphaValues;
     } catch (error) {
         console.error('Error fetching and updating data:', error);
+    }
+}
+    export async function OrigGetter(selectedIngredients) {
+        try {
+            const sequence = await fetchData(selectedIngredients[0]);
+    
+            if (!sequence) {
+                console.log("No sequence data fetched.");
+                return;
+            }
+            var res = {}
+            for (let i=0;i<sequence.length;i++) {
+                res[sequence[i][0]]=sequence[i][1];
+            }
+            console.log("res ");
+            console.log(res);
+            return res;
+        } catch (error) {
+            console.error('Error fetching and updating data:', error);
+        }
     }
     // code should fetch from API and update the sequence state if button is clicked
     async function fetchData(selectedIngredient) {
@@ -50,4 +72,3 @@ export async function AlphaGetter(selectedIngredients) {
 
 
 
-}
