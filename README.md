@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Frontend for PriceSlice
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PriceSlice is a comprehensive global map application built with React.js, designed to provide users with interactive insights into the cost of living, economic health, and purchasing power parity across different regions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Interactive Global Map:** Explore detailed displays of data values by country and city through an intuitive and responsive map interface.
+  
+- **Data Selection:** Users can select various data points to unveil specific values and insights, offering a granular view of the cost of living landscape.
 
-### `npm start`
+- **Real-time Updates:** Benefit from real-time updates as the platform leverages a scalable and efficient backend to process and deliver data swiftly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How It Works
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+PriceSlice leverages React.js for the frontend to ensure a seamless and engaging user experience. The frontend interacts with a robust backend powered by Flask, which serves as a REST API, handling data processing, aggregation, and response to frontend requests.
 
-### `npm test`
+## Technical Details
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend Framework:** React.js
+- **Backend Framework:** Flask
+- **REST API:** Designed meticulously to handle data processing and deliver real-time updates to the frontend.
+- **Responsive Design:** Ensures compatibility across various devices for optimal user experience.
 
-### `npm run build`
+## Challenges Overcome
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Data Integration:** Seamlessly integrated and harmonized data from diverse sources with unique structures and metrics.
+  
+- **Performance Optimization:** Optimized the performance of the interactive global map to handle large datasets without compromising user experience.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Accomplishments
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Cohesive User Experience:** Created an engaging user interface that simplifies the complexity of global economic data.
+  
+- **Efficient Backend:** Developed a backend that efficiently processes and delivers data to the frontend, enabling real-time interactivity on the global map.
 
-### `npm run eject`
+## Lessons Learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Data Integration:** Gained insights into integrating data from diverse sources.
+  
+- **Scalable APIs:** Learned nuances of building scalable REST APIs.
+  
+- **UI/UX Design:** Honed skills in designing accessible and engaging user interfaces.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Enhancements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Real-time Economic Indicators:** Incorporate real-time economic indicators and forecasts for more dynamic insights.
+  
+- **Comparative Analysis:** Introduce features for comparative analysis, allowing users to juxtapose different data points and derive comprehensive insights into global economic trends.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## How to Run
 
-## Learn More
+To run PriceSlice locally, follow these steps:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository from GitHub: `git clone <repository_url>`
+2. Navigate to the frontend directory: `cd <repository_name>/frontend`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Access PriceSlice in your browser at `http://localhost:3000`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to Contribute
 
-### Code Splitting
+Contributions to PriceSlice are welcome! Here's how you can contribute:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Fork the repository on GitHub.
+2. Create a new branch from the `main` branch: `git checkout -b feature/new-feature`
+3. Make your changes and commit them: `git commit -am 'Add new feature'`
+4. Push your changes to your fork: `git push origin feature/new-feature`
+5. Create a pull request detailing your changes.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ensure your contributions adhere to the project's coding standards and include relevant documentation or tests if necessary.
